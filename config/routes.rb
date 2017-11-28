@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  get 'bookings/index'
 
-  get 'bookings/show'
+  get "bookings", to:"bookings#index"
+
+  get "getbookings/:id", to:"bookings#show
 
   get 'bookings/create'
+  post 'bookings/create'
 
   get 'bookings/update'
 
@@ -11,9 +13,9 @@ Rails.application.routes.draw do
 
   get 'bookings/delete'
 
-  get 'hostels/index'
+  get "hostels", to:"hostels#index"
 
-  get 'hostels/show'
+  get "hostels/:id", to"hostels#show"
 
   get 'hostels/create'
 
