@@ -1,29 +1,38 @@
 Rails.application.routes.draw do
+  devise_for :users
+  mount Attachinary::Engine => "/attachinary"
 
-  get "bookings", to:"bookings#index"
+  # get "bookings", to:"bookings#index"
 
-  get "getbookings/:id", to:"bookings#show
+  # get "getbookings/:id", to:"bookings#show
 
-  get 'bookings/create'
-  post 'bookings/create'
+  # get 'bookings/create'
+  # post 'bookings/create'
 
-  get 'bookings/update'
+  # get 'bookings/update'
 
-  get 'bookings/edit'
+  # get 'bookings/edit'
 
-  get 'bookings/delete'
+  # get 'bookings/delete'
 
-  get "hostels", to:"hostels#index"
+  # get "hostels", to:"hostels#index"
 
-  get "hostels/:id", to"hostels#show"
+  # get "hostels/:id", to:"hostels#show"
 
-  get 'hostels/create'
+  # get 'hostels/create'
 
-  get 'hostels/update'
+  # get 'hostels/update'
 
-  get 'hostels/edit'
+  # get 'hostels/edit'
 
-  get 'hostels/delete'
+  # get 'hostels/delete'
+  # devise_for :users
+
+  resources :bookings, except: [:new]
+
+  resources :hostels do
+    resources :bookings, only:[:create]
+  end
 
   root to: 'pages#home'
 
