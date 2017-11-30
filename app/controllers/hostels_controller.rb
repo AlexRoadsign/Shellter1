@@ -52,6 +52,8 @@ class HostelsController < ApplicationController
 
   private
 
-  def hostel_arams
+  def hostel_params
     params.require(:hostel).permit(:location, :name, :price, :headline, :picture, :rating, :category, :picture)
+  end
+
 end

@@ -35,6 +35,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'attachinary', '~> 1.3', '>= 1.3.1'
 gem 'cloudinary', '1.1.7'
 gem 'jquery-fileupload-rails'
+gem 'simple_form'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
