@@ -6,6 +6,8 @@ git_source(:github) do |repo_name|
 end
 #Authentication gem file
 gem 'devise', '~> 4.2'
+
+gem 'figaro'
 #Fb log-in
 gem 'omniauth-facebook'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -36,6 +38,8 @@ gem 'attachinary', '~> 1.3', '>= 1.3.1'
 gem 'cloudinary', '1.1.7'
 gem 'jquery-fileupload-rails'
 gem 'simple_form'
+#geolocation
+gem 'geocoder'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
